@@ -1,0 +1,24 @@
+{
+  "name": "Api-Correios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RebeccaSantos/Api-Correios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RebeccaSantos/Api-Correios/issues"
+  },
+  "homepage": "https://github.com/RebeccaSantos/Api-Correios#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-correios": "^3.0.2"
+  }
+}
