@@ -19,6 +19,7 @@
   "homepage": "https://github.com/RebeccaSantos/Api-Correios#readme",
   "dependencies": {
     "correios-brasil": "^2.0.5",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "node-correios": "^3.0.2"
   }
