@@ -4,30 +4,20 @@ const ApiNodeCorreios = require('node-correios')
 
 const correios = new ApiNodeCorreios()
 
-router.post('/', (request, response) => {
-    const {
-        nCdServico,
-        sCepOrigem,
-        sCepDestino,
-        nVlPeso,
-        nCdFormato,
-        nVlComprimento,
-        nVlAltura,
-        nVlLargura,
-        nVlDiametro, 
-    } = request.body;
+router.post('/:nCdServico/:sCepOrigem/:sCepDestino/:nVlPeso/:nCdFormato/:nVlComprimento/:nVlAltura/:nVlLargura/:nVlDiametro', (request, response) =>{ 
+    const req ={
+        nCdServico:request.params.nCdServico,
+        sCepOrigem:request.params.sCepOrigem,
+        sCepDestino:request.params.sCepDestino,
+        nVlPeso:request.params.nVlPeso,
+        nCdFormato:request.params.nCdFormato,
+        nVlComprimento:request.params.nVlComprimento,
+        nVlAltura:request.params.nVlAltura,
+        nVlLargura:request.params.nVlLargura,
+        nVlDiametro:request.params.nVlDiametro, 
+    };
 
-    correios.calcPreco({
-        nCdServico,
-        sCepOrigem,
-        sCepDestino,
-        nVlPeso,
-        nCdFormato,
-        nVlComprimento,
-        nVlAltura,
-        nVlLargura,
-        nVlDiametro, 
-    }).then(result => {
+    correios.calcPreco(req).then(result => {
 
         return response.json(result)
 

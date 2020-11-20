@@ -5,7 +5,7 @@ const ApiNodeCorreios = require('node-correios')
 const correios = new ApiNodeCorreios()
 
 router.post('/', (request, response) => {
-  const { cep } = request.body
+  const { cep } = request.body;
 
   correios.consultaCEP({ cep }).then(result => {
 
