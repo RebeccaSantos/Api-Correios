@@ -8,7 +8,7 @@ router.get('/:codigo',(req,res)  => {
  const rast =[req.params.codigo];
 
   rastrearEncomendas(rast).then((response) =>{
-     return res.json(response);
+     return res.json(Object.values(response));
 
   }).catch(error => {
         
